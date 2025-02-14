@@ -80,6 +80,39 @@ T CapturaSegura<N, T>::TextoCerrado(unsigned min, unsigned max)
 }
 
 template <typename N, typename T>
+T CapturaSegura<N, T>::TextoPermitido(const char caracteres[], unsigned int longitudCaracteres) 
+{
+    T text;
+    cin >> text;
+    
+    while (true) 
+    {
+        bool valid = true;
+
+        for (char c : text) 
+        {
+            if (!(std::find(caracteres, caracteres + longitudCaracteres, c) != caracteres + longitudCaracteres)) 
+            {
+                cout << "\nError: El car\240cter '" << c << "' no est\240 permitido." << endl;
+                valid = false;
+            }
+        }
+
+        if(!valid)
+        {
+            cout << "\nIngresa de nuevo tu respuesta\n - ";
+            cin >> text;
+        }
+        else
+        {
+            break;
+        }
+    }
+
+    return text;
+}
+
+template <typename N, typename T>
 N CapturaSegura<N, T>::LongitudSegura()
 {
     N num;

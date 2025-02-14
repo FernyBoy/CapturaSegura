@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <limits>
+#include <algorithm>
 #include <type_traits>
 
 
@@ -25,6 +26,8 @@ public:
     static T TextoMaximo(unsigned max);
 
     static T TextoCerrado(unsigned min, unsigned max);
+    
+    static T TextoPermitido(const char caracteres[], unsigned int longitudCaracteres);
 
     //-------------------------------------------------------------------------------------------------------------------------
     /** \brief Verifica que el valor ingresado sea del tipo correcto.
