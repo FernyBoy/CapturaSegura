@@ -1,3 +1,9 @@
+/**
+*   \file   CapturaSegura.hpp
+*   \author Angel Fernando Borquez Guerrero
+*   \date   18/02/2025
+*/
+
 #ifndef CAPTURA_SEGURA_HPP
 #define CAPTURA_SEGURA_HPP
 
